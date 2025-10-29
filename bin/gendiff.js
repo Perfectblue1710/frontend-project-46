@@ -11,10 +11,9 @@ program
   .argument('<filepath1>', 'first configuration file')
   .argument('<filepath2>', 'second configuration file')
   .option('-f, --format [type]', 'output format')
-  .action((filepath1, filepath2, options) => {
-    console.log('File 1:', filepath1);
-    console.log('File 2:', filepath2);
-    console.log('Format:', options.format);
+ .action((filepath1, filepath2) => {
+    const result = genDiff(filepath1, filepath2);
+    console.log(result);
   });
 
 program.parse();
