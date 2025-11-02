@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/Perfectblue1710/frontend-project-46#readme",
   "dependencies": {
-    "commander": "^14.0.1"
+    "commander": "^14.0.1",
+    "lodash": "^4.17.21"
   }
 }
