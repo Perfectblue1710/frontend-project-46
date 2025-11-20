@@ -7,22 +7,25 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 const getFixturePath = (filename) => path.join(__dirname, '..', '__fixtures__', filename);
-const readFile = (filename) => readFileSync(getFixturePath(filename), 'utf-8').trim();
+const read = (filename) => readFileSync(getFixturePath(filename), 'utf-8');
 
 test('gendiff flat JSON', () => {
-  const filepath1 = getFixturePath('file1.json');
-  const filepath2 = getFixturePath('file2.json');
-  const expected = readFile('expected.txt');
-
-  const result = genDiff(filepath1, filepath2);
-  expect(result).toBe(expected);
+  const result = genDiff(getFixturePath('file1.json'), getFixturePath('file2.json'));
+  expect(result).toBe(read('expected.txt').trim());
 });
 
 test('gendiff flat YAML', () => {
-  const filepath1 = getFixturePath('file1.yml');
-  const filepath2 = getFixturePath('file2.yml');
-  const expected = readFile('expected.txt');
-
-  const result = genDiff(filepath1, filepath2);
-  expect(result).toBe(expected);
+  const result = genDiff(getFixturePath('file1.yml'), getFixturePath('file2.yml'));
+  expect(result).toBe(read('expected.txt').trim());
 });
+
+test('gendiff nested JSON', () => {
+  const result = genDiff(getFixturePath('nested1.json'), getFixturePath('nested2.json'));
+  expect(result).toBe(read('expectedNested.txt').trim());
+});
+
+test('gendiff nested YAML', () => {
+  const result = genDiff(getFixturePath('nested1.yml'), getFixturePath('nested2.yml'));
+  expect(result).toBe(read('expectedNested.txt').trim());
+});
+
