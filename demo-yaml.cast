@@ -1,7 +1,0 @@
-{"version": 2, "width": 120, "height": 30, "timestamp": 1762925498, "env": {"SHELL": "/bin/bash", "TERM": "xterm-256color"}}
-[0.025065, "o", "\u001b[?2004h\u001b]0;perfectblue@WASSUPMYBOY: ~/frontend-project-46\u0007\u001b[01;32mperfectblue@WASSUPMYBOY\u001b[00m:\u001b[01;34m~/frontend-project-46\u001b[00m$ "]
-[8.560394, "o", "\u001b[7m node bin/gendiff.js __fixtures__/file1.yml __fixtures__/file2.yml\u001b[27m"]
-[9.353456, "o", "\r\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C node bin/gendiff.js __fixtures__/file1.yml __fixtures__/file2.yml\r\n\u001b[?2004l\r"]
-[9.49842, "o", "{\r\n  - follow: false\r\n    host: hexlet.io\r\n  - proxy: 123.234.53.22\r\n  - timeout: 50\r\n  + timeout: 20\r\n  + verbose: true\r\n}\r\n"]
-[9.510776, "o", "\u001b[?2004h\u001b]0;perfectblue@WASSUPMYBOY: ~/frontend-project-46\u0007\u001b[01;32mperfectblue@WASSUPMYBOY\u001b[00m:\u001b[01;34m~/frontend-project-46\u001b[00m$ "]
-[12.830744, "o", "\u001b[?2004l\r\r\nexit\r\n"]
