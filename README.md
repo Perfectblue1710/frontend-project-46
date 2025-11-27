@@ -10,3 +10,5 @@
 [![https://asciinema.org/a/cHzXLyDB6ElYAI0v4KqM6EocI]]
 ### Запись 3(Демонстрация работы)
 [![https://asciinema.org/a/y90d1VhzoXa1IHy9tOZCumbpu]]
+## Запись 4 демонстрация работы
+[![https://asciinema.org/a/GTiUF3MmG0hgJPOSnNQezf1E1]]

@@ -1,12 +1,12 @@
 import { fileURLToPath } from 'url';
-import path, { dirname } from 'path';
+import { dirname, join } from 'path';
 import { readFileSync } from 'fs';
 import genDiff from '../src/genDiff.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-const getFixturePath = (filename) => path.join(__dirname, '..', '__fixtures__', filename);
+const getFixturePath = (filename) => join(__dirname, '..', '__fixtures__', filename);
 const read = (filename) => readFileSync(getFixturePath(filename), 'utf-8');
 
 test('gendiff flat JSON', () => {
@@ -28,4 +28,5 @@ test('gendiff nested YAML', () => {
   const result = genDiff(getFixturePath('nested1.yml'), getFixturePath('nested2.yml'));
   expect(result).toBe(read('expectedNested.txt').trim());
 });
+
 
