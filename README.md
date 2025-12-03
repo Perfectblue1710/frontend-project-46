@@ -9,5 +9,5 @@
 [![https://asciinema.org/a/O6VUi89QW9OlEuJjJcyhypVqc]]
 ### Запись 3(Демонстрация работы)
 [![https://asciinema.org/a/sdnHfoEie9OJDUedv63RRuSOg]]
-## Запись 4 демонстрация работы
-[![https://asciinema.org/a/GTiUF3MmG0hgJPOSnNQezf1E1]]
+## Запись 4,5 демонстрация работы
+[![ https://asciinema.org/a/q59sdqqbYf4oXdGChFPad4boB]]
