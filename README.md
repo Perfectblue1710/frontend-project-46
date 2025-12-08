@@ -6,6 +6,7 @@
 [![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=Perfectblue1710_frontend-project-46)][(https://sonarcloud.io/summary/new_code?id=Perfectblue1710_frontend-project-46)]
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=Perfectblue1710_frontend-project-46&metric=coverage)](https://sonarcloud.io/summary/new_code?id=Perfectblue1710_frontend-project-46)
 
+
 ### Запись 2(демонстрация работы пакета)
 [![https://asciinema.org/a/O6VUi89QW9OlEuJjJcyhypVqc]]
 ### Запись 3(Демонстрация работы)
