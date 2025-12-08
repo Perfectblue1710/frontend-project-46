@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 
+          fetch-depth: 0 
 
       - name: Set up Node
         uses: actions/setup-node@v4
@@ -21,7 +21,7 @@ jobs:
           node-version: 20
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Run tests with coverage
         run: npm test -- --coverage
@@ -35,7 +35,7 @@ jobs:
             -Dsonar.projectKey=Perfectblue1710_frontend-project-46
             -Dsonar.organization=perfectblue1710
             -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info
-            -Dsonar.sources=.
+            -Dsonar.sources=src
             -Dsonar.tests=__tests__
             -Dsonar.test.inclusions=__tests__/**
             -Dsonar.exclusions=coverage/**
