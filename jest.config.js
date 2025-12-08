@@ -1,11 +1,10 @@
-export default 
-{
+export default {
   testEnvironment: 'node',
 
   moduleNameMapper: {
     '^(\\.{1,2}/.*)\\.js$': '$1',
   },
-  transform: {},
+
   collectCoverage: true,
   collectCoverageFrom: [
     'src/**/*.js',
@@ -14,8 +13,11 @@ export default
   coverageDirectory: 'coverage',
   coverageReporters: ['text', 'lcov', 'html'],
   testPathIgnorePatterns: ['/node_modules/'],
+
   transform: {
     '^.+\\.js$': 'babel-jest',
   },
 
 };
+
+
