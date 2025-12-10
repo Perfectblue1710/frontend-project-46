@@ -32,7 +32,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/11</span>
+                <span class='fraction'>0/12</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">10.52% </span>
+                <span class="strong">10% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>2/19</span>
+                <span class='fraction'>2/20</span>
             </div>
         
             
@@ -106,7 +106,11 @@
 <a name='L41'></a><a href='#L41'>41</a>
 <a name='L42'></a><a href='#L42'>42</a>
 <a name='L43'></a><a href='#L43'>43</a>
-<a name='L44'></a><a href='#L44'>44</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">2x</span>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -122,16 +126,11 @@
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -139,7 +138,16 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -163,30 +171,34 @@
 };
 &nbsp;
 const formatPlain = <span class="fstat-no" title="function not covered" >(t</span>ree) =&gt; {
-  const iter = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(n</span>odes, path) =&gt; <span class="cstat-no" title="statement not covered" >nodes</span></span>
-    .filter(<span class="fstat-no" title="function not covered" >(n</span>ode) =&gt; <span class="cstat-no" title="statement not covered" >node.type !== 'unchanged')</span>
-    .map(<span class="fstat-no" title="function not covered" >(n</span>ode) =&gt; {
-      const property = <span class="cstat-no" title="statement not covered" >[...path, node.key].join('.');</span>
+  const iter = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >(n</span>odes, path) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    return nodes</span>
+      .filter(<span class="fstat-no" title="function not covered" >(n</span>ode) =&gt; <span class="cstat-no" title="statement not covered" >node.type !== 'unchanged')</span>
+      .map(<span class="fstat-no" title="function not covered" >(n</span>ode) =&gt; {
+        const property = <span class="cstat-no" title="statement not covered" >[...path, node.key].join('.');</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      switch (node.type) {</span>
-        case 'added':
-<span class="cstat-no" title="statement not covered" >          return `Property '${property}' was added with value: ${stringify(node.value)}`;</span>
+<span class="cstat-no" title="statement not covered" >        switch (node.type) {</span>
+          case 'added':
+<span class="cstat-no" title="statement not covered" >            return `Property '${property}' was added with value: ${stringify(node.value)}`;</span>
 &nbsp;
-        case 'removed':
-<span class="cstat-no" title="statement not covered" >          return `Property '${property}' was removed`;</span>
+          case 'removed':
+<span class="cstat-no" title="statement not covered" >            return `Property '${property}' was removed`;</span>
 &nbsp;
-        case 'updated':
-<span class="cstat-no" title="statement not covered" >          return `Property '${property}' was updated. From ${stringify(node.oldValue)} to ${stringify(node.newValue)}`;</span>
+          case 'changed':
+          case 'updated': 
+<span class="cstat-no" title="statement not covered" >            return `Property '${property}' was updated. From ${stringify(node.oldValue)} to ${stringify(node.newValue)}`;</span>
 &nbsp;
-        case 'nested':
-<span class="cstat-no" title="statement not covered" >          return iter(node.children, [...path, node.key]);</span>
+          case 'nested':
+<span class="cstat-no" title="statement not covered" >            return iter(node.children, [...path, node.key]);</span>
 &nbsp;
-        default:
-<span class="cstat-no" title="statement not covered" >          return null;</span>
-      }
-    })
-    .filter(Boolean)
-    .join('\n');
+          default:
+<span class="cstat-no" title="statement not covered" >            return [];</span>
+        }
+      })
+      .flat() 
+      .filter(Boolean)
+      .join('\n');
+  };
 &nbsp;
 <span class="cstat-no" title="statement not covered" >  return iter(tree, []);</span>
 };
@@ -199,7 +211,7 @@ export default formatPlain;
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-12-09T10:22:28.283Z
+                at 2025-12-10T10:14:15.363Z
             </div>
         <script src="../../prettify.js"></script>
         <script>

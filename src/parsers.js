@@ -10,12 +10,15 @@ export const readFile = (filepath) => {
 export const parseFile = (data, filepath) => {
   const ext = path.extname(filepath).toLowerCase();
 
-  if (ext === '.json') {
-    return JSON.parse(data);
-  }
-  if (ext === '.yml' || ext === '.yaml') {
-    return yaml.load(data);
-  }
+  switch (ext) {
+    case '.json':
+      return JSON.parse(data);
 
-  throw new Error(`Unknown file format: ${ext}`);
-};
+    case '.yml':
+    case '.yaml':
+      return yaml.load(data);
+
+    default:
+      throw new Error(`Unsupported file format: ${ext}`);
+  }
+}
