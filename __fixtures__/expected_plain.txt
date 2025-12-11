@@ -1,0 +1,9 @@
+Property 'follow' was removed
+Property 'setting1' was removed
+Property 'setting2' was added with value: 'baz'
+Property 'setting3' was updated. From true to null
+Property 'setting4' was added with value: [complex value]
+Property 'common.follow' was added with value: false
+Property 'common.setting2' was updated. From 'old' to 'new'
+Property 'common.setting3' was removed
+Property 'common.setting6.deep.key' was added with value: 'value'

@@ -1,4 +1,4 @@
-test('plain formatter', () => {
+test('plain', () => {
   const result = readFile('result_plain.txt');
   expect(genDiff(file1, file2, 'plain')).toBe(result);
 });
