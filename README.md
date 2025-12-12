@@ -12,4 +12,4 @@
 ### Запись 3(Демонстрация работы)
 [![https://asciinema.org/a/sdnHfoEie9OJDUedv63RRuSOg]]
 ## Запись 4,5 демонстрация работы
-[![ https://asciinema.org/a/q59sdqqbYf4oXdGChFPad4boB]]
+[![https://asciinema.org/a/FEN5g3ZYtmvgzjmYvbsUy4sft]]

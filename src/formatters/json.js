@@ -1,4 +1,8 @@
-const json = (tree) => JSON.stringify(tree, null, 2);
 
-export default json;
 
+const formatJson = (diffTree) => {
+
+  return JSON.stringify(diffTree, null, 2); 
+};
+
+export default formatJson;
