@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "it's my project 46",
   "type": "module",
-  "main": "src/formatters/index.js",
+  "main": "src/index.js",
   "bin": {
     "gendiff": "bin/gendiff.js"
   },
