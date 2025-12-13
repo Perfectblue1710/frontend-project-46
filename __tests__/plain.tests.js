@@ -1,14 +1,14 @@
-import path from 'path';
-import { fileURLToPath } from 'url';
-import genDiff from '../src/genDiff.js';
+import path from 'path'
+import { fileURLToPath } from 'url'
+import genDiff from '../src/genDiff.js'
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
 
-const getFixturePath = (filename) => `${__dirname}/../__fixtures__/${filename}`;
+const getFixturePath = (filename) => `${__dirname}/../__fixtures__/${filename}`
 
-const file1 = getFixturePath('nested1.json');
-const file2 = getFixturePath('nested2.json');
+const file1 = getFixturePath('nested1.json')
+const file2 = getFixturePath('nested2.json')
 
 const expectedPlain = `Property 'common.follow' was added with value: false
 Property 'common.setting2' was removed
@@ -23,6 +23,6 @@ Property 'group2' was removed
 Property 'group3' was added with value: [complex value]`; 
 
 test('gendiff should output differences in plain format', () => {
-  const result = genDiff(file1, file2, 'plain');
-  expect(result).toEqual(expectedPlain);
-});
+  const result = genDiff(file1, file2, 'plain')
+  expect(result).toEqual(expectedPlain)
+})

@@ -1,4 +1,4 @@
-import _ from 'lodash';
+import _ from 'lodash'
 
 const makeIndent = (depth, spacesCount = 4) =>
   ' '.repeat(depth * spacesCount - 2);
@@ -13,20 +13,20 @@ const stringify = (value, depth) => {
       `${makeIndent(depth + 1)}  ${key}: ${stringify(val, depth + 1)}`,
     );
 
-  return `{\n${entries.join('\n')}\n${makeIndent(depth)}  }`;
+  return `{\n${entries.join('\n')}\n${makeIndent(depth)}  }`
 };
 
 const stylish = (tree) => {
   const iter = (nodes, depth) => nodes.map((node) => {
     switch (node.type) {
       case 'added':
-        return `${makeIndent(depth)}+ ${node.key}: ${stringify(node.value, depth)}`;
+        return `${makeIndent(depth)}+ ${node.key}: ${stringify(node.value, depth)}`
 
       case 'removed':
-        return `${makeIndent(depth)}- ${node.key}: ${stringify(node.value, depth)}`;
+        return `${makeIndent(depth)}- ${node.key}: ${stringify(node.value, depth)}`
 
       case 'unchanged':
-        return `${makeIndent(depth)}  ${node.key}: ${stringify(node.value, depth)}`;
+        return `${makeIndent(depth)}  ${node.key}: ${stringify(node.value, depth)}`
 
       case 'changed':
         return [
@@ -35,14 +35,14 @@ const stylish = (tree) => {
         ].join('\n');
 
       case 'nested':
-        return `${makeIndent(depth)}  ${node.key}: {\n${iter(node.children, depth + 1)}\n${makeIndent(depth)}  }`;
+        return `${makeIndent(depth)}  ${node.key}: {\n${iter(node.children, depth + 1)}\n${makeIndent(depth)}  }`
 
       default:
-        throw new Error(`Unknown type: ${node.type}`);
+        throw new Error(`Unknown type: ${node.type}`)
     }
-  }).join('\n');
+  }).join('\n')
 
-  return `{\n${iter(tree, 1)}\n}`;
+  return `{\n${iter(tree, 1)}\n}`
 };
 
-export default stylish;
+export default stylish
