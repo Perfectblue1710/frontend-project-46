@@ -16,10 +16,10 @@ program
 
     const diff = genDiff(filepath1, filepath2, format)
     console.log(diff)
-  });
-
+  })
 
 program.parse()
+
 
 
 

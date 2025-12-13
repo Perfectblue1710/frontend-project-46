@@ -9,7 +9,7 @@ const stringify = (value) => {
     return `'${value}'`
   }
   return String(value)
-};
+}
 
 const formatPlain = (tree) => {
 
@@ -39,10 +39,11 @@ const formatPlain = (tree) => {
       })
       .flat() 
       .join('\n')
-  };
+  }
 
   return iter(tree, [])
 }
 
 export default formatPlain
+
 

@@ -8,10 +8,10 @@ const diffBuilder = (obj1, obj2) => {
     const val2 = obj2[key]
 
     if (!Object.hasOwn(obj2, key)) {
-      return { key, type: 'removed', value: val1 };
+      return { key, type: 'removed', value: val1 }
     }
     if (!Object.hasOwn(obj1, key)) {
-      return { key, type: 'added', value: val2 };
+      return { key, type: 'added', value: val2 }
     }
 
     if (_.isPlainObject(val1) && _.isPlainObject(val2)) {
@@ -19,7 +19,7 @@ const diffBuilder = (obj1, obj2) => {
         key,
         type: 'nested',
         children: diffBuilder(val1, val2),
-      };
+      }
     }
 
     if (!_.isEqual(val1, val2)) {
@@ -28,7 +28,7 @@ const diffBuilder = (obj1, obj2) => {
         type: 'changed',
         oldValue: val1,
         newValue: val2,
-      };
+      }
     }
 
     return { key, type: 'unchanged', value: val1 }
@@ -36,3 +36,4 @@ const diffBuilder = (obj1, obj2) => {
 }
 
 export default diffBuilder
+

@@ -17,5 +17,6 @@ test('gendiff JSON format', () => {
   const result = JSON.parse(genDiff(filepath1, filepath2, 'json'))
 
   expect(result).toEqual(expected)
-});
+})
+
 

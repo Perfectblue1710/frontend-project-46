@@ -13,6 +13,7 @@ const format = (tree, formatName) => {
     throw new Error(`Unknown format: ${formatName}`)
   }
   return formatters[formatName](tree)
-};
+}
 
 export default format
+
