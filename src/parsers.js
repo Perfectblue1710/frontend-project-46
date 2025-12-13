@@ -6,10 +6,10 @@ const parse = (data, extension) => {
   switch (extension) {
     case '.json':
       return JSON.parse(data)
-    case '.yml': 
+    case '.yml':
     case '.yaml':
       return yaml.load(data)
-      
+
     default:
       throw new Error(`Unknown extension: ${extension}`)
   }
@@ -18,8 +18,7 @@ const parse = (data, extension) => {
 export const parseFile = (filepath) => {
   const data = fs.readFileSync(filepath, 'utf-8')
   const extension = path.extname(filepath)
-  
+
   return parse(data, extension)
 }
-
 

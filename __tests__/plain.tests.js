@@ -26,4 +26,3 @@ test('gendiff should output differences in plain format', () => {
   const result = genDiff(file1, file2, 'plain')
   expect(result).toEqual(expectedPlain)
 })
-

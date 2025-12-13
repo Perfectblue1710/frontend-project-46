@@ -12,7 +12,6 @@ const stringify = (value) => {
 }
 
 const formatPlain = (tree) => {
-
   const iter = (nodes, path) => {
     return nodes
       .filter((node) => node.type !== 'unchanged')
@@ -25,7 +24,7 @@ const formatPlain = (tree) => {
 
           case 'removed':
             return `Property '${property}' was removed`
-            
+
           case 'changed':
             return `Property '${property}' was updated. From ${stringify(node.oldValue)} to ${stringify(node.newValue)}`
 
@@ -34,10 +33,9 @@ const formatPlain = (tree) => {
 
           default:
             return null
-
         }
       })
-      .flat() 
+      .flat()
       .join('\n')
   }
 
@@ -45,5 +43,4 @@ const formatPlain = (tree) => {
 }
 
 export default formatPlain
-
 

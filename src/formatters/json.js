@@ -4,4 +4,3 @@ const formatJson = (diffTree) => {
 
 export default formatJson
 
-

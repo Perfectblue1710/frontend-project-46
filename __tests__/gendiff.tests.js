@@ -30,4 +30,3 @@ test('gendiff nested YAML', () => {
 })
 
 
-

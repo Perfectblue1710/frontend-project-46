@@ -19,4 +19,3 @@ test('gendiff JSON format', () => {
   expect(result).toEqual(expected)
 })
 
-
