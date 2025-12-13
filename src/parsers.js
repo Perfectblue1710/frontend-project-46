@@ -19,5 +19,7 @@ export const parseFile = (filepath) => {
   const data = fs.readFileSync(filepath, 'utf-8')
   const extension = path.extname(filepath)
   
-  return parse(data, extension);
+  return parse(data, extension)
 }
+
+

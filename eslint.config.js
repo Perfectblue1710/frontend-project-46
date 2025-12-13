@@ -1,11 +1,11 @@
-import js from "@eslint/js";
-import globals from "globals";
+import js from '@eslint/js'
+import globals from 'globals'
 
 export default [
   {
     languageOptions: {
-      ecmaVersion: "latest",
-      sourceType: "module",
+      ecmaVersion: 'latest',
+      sourceType: 'module',
       globals: {
         ...globals.node,
         ...globals.jest,
@@ -13,10 +13,10 @@ export default [
     },
 
     rules: {
-      "no-unused-vars": "warn",
-      "no-undef": "error",
-      "no-console": "off",
+      'no-unused-vars': 'warn',
+      'no-undef': 'error',
+      'no-console': 'off',
     },
   },
   js.configs.recommended,
-];
+]

@@ -31,7 +31,7 @@ const stylish = (tree) => {
       case 'changed':
         return [
           `${makeIndent(depth)}- ${node.key}: ${stringify(node.oldValue, depth)}`,
-          `${makeIndent(depth)}+ ${node.key}: ${stringify(node.newValue, depth)}`
+          `${makeIndent(depth)}+ ${node.key}: ${stringify(node.newValue, depth)}`,
         ].join('\n');
 
       case 'nested':

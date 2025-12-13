@@ -17,7 +17,7 @@ const formatPlain = (tree) => {
     return nodes
       .filter((node) => node.type !== 'unchanged')
       .map((node) => {
-        const property = [...path, node.key].join('.'); 
+        const property = [...path, node.key].join('.')
 
         switch (node.type) {
           case 'added':
@@ -33,7 +33,7 @@ const formatPlain = (tree) => {
             return iter(node.children, [...path, node.key])
 
           default:
-            return null; 
+            return null
 
         }
       })
@@ -45,3 +45,4 @@ const formatPlain = (tree) => {
 }
 
 export default formatPlain
+

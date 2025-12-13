@@ -1,4 +1,4 @@
-import _ from 'lodash';
+import _ from 'lodash'
 
 const diffBuilder = (obj1, obj2) => {
   const keys = _.sortBy(_.union(Object.keys(obj1), Object.keys(obj2)))
@@ -35,4 +35,4 @@ const diffBuilder = (obj1, obj2) => {
   })
 }
 
-export default diffBuilder;
+export default diffBuilder

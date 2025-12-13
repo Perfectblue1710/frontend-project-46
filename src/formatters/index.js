@@ -6,7 +6,7 @@ const formatters = {
   stylish,
   plain,
   json,
-};
+}
 
 const format = (tree, formatName) => {
   if (!formatters[formatName]) {
